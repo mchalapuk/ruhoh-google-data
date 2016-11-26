@@ -1,0 +1,16 @@
+---
+name: 'example site name'
+---
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "{{ urls.production }}/",
+{{# this_config.alternate? }}
+  "alternateName": "{{ . }}",
+{{/ this_config.alternate? }}
+  "name": "{{ this_config.name }}"
+}
+</script>
+
