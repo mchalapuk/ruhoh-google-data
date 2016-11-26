@@ -14,3 +14,14 @@ name: 'example site name'
 }
 </script>
 
+{{# this_config.logo? }}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "{{ urls.production }}/",
+  "logo": "{{ this_config.logo }}"
+}
+</script>
+{{/ this_config.logo? }}
+
